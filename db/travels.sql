@@ -1,16 +1,16 @@
-DROP TABLE city;
-DROP TABLE country;
+DROP TABLE cities;
+DROP TABLE countries;
 
-CREATE TABLE country (
+CREATE TABLE countries (
   id SERIAL8 PRIMARY KEY,
   name VARCHAR(255),
   visited BOOLEAN
 );
 
---
-CREATE TABLE city (
+
+CREATE TABLE cities (
   id SERIAL8 PRIMARY KEY,
---   name VARCHAR(255),
---   visited BOOLEAN,
---   country_id INT8 REFERENCES country(id)
--- );
+  name VARCHAR(255),
+  visited BOOLEAN,
+  country_id INT8 REFERENCES country(id)
+);
