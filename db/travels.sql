@@ -7,10 +7,10 @@ CREATE TABLE country (
   visited BOOLEAN
 );
 
-
+--
 CREATE TABLE city (
   id SERIAL8 PRIMARY KEY,
-  name VARCHAR(255),
-  visited BOOLEAN,
-  country_id INT8 REFERENCES country(id)
-);
+--   name VARCHAR(255),
+--   visited BOOLEAN,
+--   country_id INT8 REFERENCES country(id)
+-- );
