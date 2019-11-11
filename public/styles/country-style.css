@@ -1,0 +1,33 @@
+/* font-family: 'Prata', serif;
+font-family: 'Lato', sans-serif; */
+body {
+  margin: 0px;
+}
+
+.country-title{
+  font-family: 'Prata', serif;
+  text-decoration: none;
+}
+
+.country-container{
+  background-color: pink;
+  width: 17%;
+  height: 15em;
+  margin-bottom: 2em;
+  margin-left: 1em;
+  margin-right: 1em;
+  text-align: center;
+}
+
+.countries-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+}
+
+.countries-head{
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}

@@ -14,3 +14,8 @@ post '/home/new_country' do
   Country.new(params).save
   redirect to '/home'
 end
+
+get '/home/all' do
+  @country = Country.all
+  erb(:"country/all_countries")
+end

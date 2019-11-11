@@ -1,0 +1,10 @@
+.add-btn{
+  height: 20px;
+  width: 20px;
+  background-color: lightgreen;
+  margin-left: 15px;
+  font-size: 1.5em;
+  text-decoration: none;
+  padding: 10px;
+  text-align: center;
+}
