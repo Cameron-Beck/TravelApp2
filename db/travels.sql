@@ -1,16 +1,17 @@
-DROP TABLE cities;
-DROP TABLE countries;
+DROP TABLE city;
+DROP TABLE country;
 
-CREATE TABLE countries (
+CREATE TABLE country (
   id SERIAL8 PRIMARY KEY,
   name VARCHAR(255),
-  visited BOOLEAN
+  visited BOOLEAN NOT NULL,
+  description TEXT
 );
 
-
-CREATE TABLE cities (
+CREATE TABLE city (
   id SERIAL8 PRIMARY KEY,
   name VARCHAR(255),
   visited BOOLEAN,
-  country_id INT8 REFERENCES country(id)
+  description TEXT,
+  country_id INT8 REFERENCES country(id) ON DELETE CASCADE
 );
