@@ -41,3 +41,8 @@ get '/home/bucket_list_cities' do
   @city = City.all_bucket_list
   erb(:"city/bucket_list_cities")
 end
+
+get '/home/visited_cities' do
+  @city = City.all_cities_visited
+  erb(:"country/visited_countries")
+end
