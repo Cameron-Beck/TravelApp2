@@ -14,3 +14,8 @@ post '/home/new_city' do
   City.new(params).save
   redirect to '/home'
 end
+
+get '/home/all_cities' do
+  @city = City.all
+  erb(:"city/all_cities")
+end

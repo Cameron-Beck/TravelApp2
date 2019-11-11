@@ -15,7 +15,7 @@ post '/home/new_country' do
   redirect to 'country/all_countries'
 end
 
-get '/home/all' do
+get '/home/all_countries' do
   @country = Country.all
   erb(:"country/all_countries")
 end
