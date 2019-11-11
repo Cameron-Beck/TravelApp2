@@ -36,3 +36,8 @@ post '/home/:id/edit_country' do
   country.update
   redirect to "home/all_countries"
 end
+
+get '/home/bucket_list_countries' do
+  @country = Country.all_bucket_list
+  erb(:"country/bucket_list_countries")
+end
