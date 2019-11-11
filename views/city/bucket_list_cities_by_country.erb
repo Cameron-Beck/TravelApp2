@@ -1,4 +1,4 @@
-<h1>Bucket List Cities</h1>
+<h1>Bucket List Cities in <%= @country.name %></h1>
 <div class="countries-container">
   <% @cities.each do |city| %>
   <div class = "country-container">
@@ -8,4 +8,3 @@
   </div>
   <% end %>
 </div>
-<a href="/add_city_to_bucket_list">add new city</a>
