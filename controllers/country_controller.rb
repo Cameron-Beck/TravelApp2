@@ -46,3 +46,10 @@ get '/home/visited_countries' do
   @country = Country.all_countries_visited
   erb(:"country/visited_countries")
 end
+
+get '/bucket_list_cities/:id' do
+  @country = Country.find(params['id'])
+  @cities = @country.cities()
+  @id = params['id']
+  erb(:"city/visited_cities_by_country")
+end

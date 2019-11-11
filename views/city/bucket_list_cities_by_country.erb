@@ -1,0 +1,11 @@
+<h1>Bucket List Cities</h1>
+<div class="countries-container">
+  <% @cities.each do |city| %>
+  <div class = "country-container">
+    <h3><a <%= city['id'] %>"><%= city['name']%></a></h3>
+    <form action="/bucket_list_cities/<%= city['id'] %>/delete" method="POST"><input type="submit" value="Delete"></form>
+    <form action="/bucket_list_cities/<%= city['id'] %>/edit_bucket_list_cities"><input type="submit" value="edit"></form>
+  </div>
+  <% end %>
+</div>
+<a href="/add_city_to_bucket_list">add new city</a>
