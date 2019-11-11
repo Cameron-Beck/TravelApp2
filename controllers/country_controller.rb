@@ -26,13 +26,13 @@ post '/home/:id/delete_country' do
   redirect back
 end
 
-get '/countries_visited/:id/edit_country' do
+get '/home/:id/edit_country' do
   @country = Country.find(params['id'])
-  erb(":country/edit_country")
+  erb(:"country/edit_country")
 end
 
-post '/home/:id/edit_country' do
+post '/home/:id' do
   country = Country.new(params)
   country.update
-  redirect back
+  redirect to "home/all_countries"
 end
