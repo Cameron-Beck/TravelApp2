@@ -12,7 +12,7 @@ end
 
 post '/home/new_country' do
   Country.new(params).save
-  redirect to '/home'
+  redirect to 'country/all_countries'
 end
 
 get '/home/all' do
