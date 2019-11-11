@@ -19,3 +19,20 @@ get '/home/all_countries' do
   @country = Country.all
   erb(:"country/all_countries")
 end
+
+post '/home/:id/delete_country' do
+  country = Country.find(params['id'])
+  country.delete
+  redirect back
+end
+
+get '/countries_visited/:id/edit_country' do
+  @country = Country.find(params['id'])
+  erb(":country/edit_country")
+end
+
+post '/home/:id/edit_country' do
+  country = Country.new(params)
+  country.update
+  redirect back
+end

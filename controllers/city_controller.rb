@@ -19,3 +19,15 @@ get '/home/all_cities' do
   @city = City.all
   erb(:"city/all_cities")
 end
+
+post '/home/:id/delete_city' do
+  city = City.find(params['id'])
+  city.delete
+  redirect back
+end
+
+post '/home/:id/edit_country' do
+  country = Country.new(params)
+  country.update
+  redirect back
+end
