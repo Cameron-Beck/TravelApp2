@@ -12,7 +12,7 @@ class Country
   end
 
   def save()
-    sql = "INSERT INTO country(
+    sql = "INSERT INTO countries(
       name ,
       visited,
       description)
@@ -25,7 +25,7 @@ class Country
   end
 
   def self.find(id)
-    sql = "SELECT * FROM country
+    sql = "SELECT * FROM countries
     WHERE id = $1"
     values = [id]
     result = SqlRunner.run(sql, values).first
@@ -34,12 +34,12 @@ class Country
   end
 
   def self.delete_all()
-    sql = "DELETE FROM country"
+    sql = "DELETE FROM countries"
     SqlRunner.run( sql )
   end
 
   def delete()
-  sql = "DELETE FROM country
+  sql = "DELETE FROM countries
   WHERE id = $1"
   values = [@id]
   SqlRunner.run(sql, values)
@@ -50,14 +50,14 @@ class Country
   end
 
   def self.all()
-    sql = "SELECT * FROM country"
+    sql = "SELECT * FROM countries"
     country_data = SqlRunner.run(sql)
     countries = map_items(country_data)
     return countries
   end
 
   def update()
-    sql = "UPDATE country
+    sql = "UPDATE countries
     SET(
       name,
       description)
@@ -68,21 +68,21 @@ class Country
   end
 
   def self.all_bucket_list()
-    sql = "SELECT * FROM country WHERE visited = true"
+    sql = "SELECT * FROM countries WHERE visited = true"
     country_data = SqlRunner.run(sql)
     countries = map_items(country_data)
     return countries
   end
 
   def self.all_countries_visited()
-    sql = "SELECT * FROM country WHERE visited = false"
+    sql = "SELECT * FROM countries WHERE visited = false"
     country_data = SqlRunner.run(sql)
     countries = map_items(country_data)
     return countries
   end
 
   def cities()
-    sql = "SELECT * FROM city WHERE country_id = $1"
+    sql = "SELECT * FROM cities WHERE country_id = $1"
     values = [@id]
     city_data = SqlRunner.run(sql, values)
     cities = city_data.map{|city| City.new(city)}

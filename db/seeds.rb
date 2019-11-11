@@ -35,31 +35,31 @@ country4 = Country.new({
 city1 = City.new({
   "name" => "London",
   "visited" => true,
-  'country_id' => country1.id
-  "description" => "A misserable, seemingly post apocalyptic hellscape"
+  'country_id' => country1.id,
+  "description" => "like this place"
   })
   city1.save()
 
 city2 = City.new({
   "name" => "Paris",
   "visited" => false,
-  'country_id' => country2.id
-  "description" => "A misserable, seemingly post apocalyptic hellscape"
+  'country_id' => country2.id,
+  "description" => "like this place"
   })
   city2.save()
 
 city3 = City.new({
   "name" => "Rome",
   "visited" => true,
-  'country_id' => country3.id
-  "description" => "A misserable, seemingly post apocalyptic hellscape"
+  'country_id' => country3.id,
+  "description" => "like this place"
   })
   city3.save()
 
 city4 = City.new({
   "name" => "Berlin",
   "visited" => false,
-  'country_id' => country4.id
-  "description" => "A misserable, seemingly post apocalyptic hellscape"
+  'country_id' => country4.id,
+  "description" => "like this place"
   })
   city4.save()
