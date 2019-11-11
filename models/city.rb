@@ -85,11 +85,11 @@ class City
     return visited_cities
   end
 
-  def self.all_countries_visited()
+  def self.all_cities_visited()
     sql = "SELECT * FROM countries WHERE visited = true"
-    country_data = SqlRunner.run(sql)
-    visited_countries = map_items(city_data)
-    return visited_countries
+    city_data = SqlRunner.run(sql)
+    visited_cities = map_items(city_data)
+    return visited_cities
   end
 
 end
