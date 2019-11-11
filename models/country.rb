@@ -69,14 +69,14 @@ class Country
   end
 
   def self.all_bucket_list()
-    sql = "SELECT * FROM countries WHERE visited = true"
+    sql = "SELECT * FROM countries WHERE visited = false"
     country_data = SqlRunner.run(sql)
     visited_countries = map_items(country_data)
     return visited_countries
   end
 
   def self.all_countries_visited()
-    sql = "SELECT * FROM countries WHERE visited = false"
+    sql = "SELECT * FROM countries WHERE visited = true"
     country_data = SqlRunner.run(sql)
     visited_countries = map_items(country_data)
     return visited_countries

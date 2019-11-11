@@ -78,4 +78,18 @@ class City
     return city_data.map { |city| City.new(city) }
   end
 
+  def self.all_bucket_list()
+    sql = "SELECT * FROM cities WHERE visited = false"
+    city_data = SqlRunner.run(sql)
+    visited_cities = map_items(city_data)
+    return visited_cities
+  end
+
+  def self.all_countries_visited()
+    sql = "SELECT * FROM countries WHERE visited = true"
+    country_data = SqlRunner.run(sql)
+    visited_countries = map_items(city_data)
+    return visited_countries
+  end
+
 end
