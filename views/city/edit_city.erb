@@ -1,14 +1,14 @@
-<form method="POST" action="/home/<%= @country.id %>/edit_country">
+<form method="POST" action="/home/<%= @city.id %>/edit_city">
   <div>
     <div>
       <label for="name">name:</label>
-      <input type="text" name="name" id="name" value="<%= @country.name %>"/>
+      <input type="text" name="name" id="name" value="<%= @city.name %>"/>
     </div>
     <div>
 
       <div>
         <label for="description">Description</label>
-        <input type="text" name="description" id="description" value="<%= @country.description%>">
+        <input type="text" name="description" id="description" value="<%= @city.description%>">
       </div>
 
       <div>

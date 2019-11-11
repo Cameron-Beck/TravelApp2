@@ -26,8 +26,13 @@ post '/home/:id/delete_city' do
   redirect back
 end
 
-post '/home/:id/edit_country' do
-  country = Country.new(params)
-  country.update
-  redirect back
+get '/home/:id/edit_city' do
+  @city = City.find(params['id'])
+  erb(:"city/edit_city")
+end
+
+post '/home/:id/edit_city' do
+  city = City.new(params)
+  city.update
+  redirect to "home/all_cities"
 end

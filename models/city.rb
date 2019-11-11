@@ -55,6 +55,18 @@ class City
     return city
   end
 
+  def update()
+    sql = "UPDATE cities
+    SET(
+      name,
+      description,
+      visited)
+      = ($1, $2, $3)
+    WHERE id = $4"
+    values = [@name, @description, @visited, @id]
+    SqlRunner.run(sql, values)
+  end
+
   def self.cities_by_country()
     sql = "SELECT * FROM cities @ID"
     city_data = SqlRunner.run(sql)

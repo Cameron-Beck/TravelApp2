@@ -31,7 +31,7 @@ get '/home/:id/edit_country' do
   erb(:"country/edit_country")
 end
 
-post '/home/:id' do
+post '/home/:id/edit_country' do
   country = Country.new(params)
   country.update
   redirect to "home/all_countries"

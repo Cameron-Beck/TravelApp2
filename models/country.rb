@@ -60,10 +60,11 @@ class Country
     sql = "UPDATE countries
     SET(
       name,
-      description)
-      = ($1, $2)
-    WHERE id = $3"
-    values = [@name, @description, @id]
+      description,
+      visited)
+      = ($1, $2, $3)
+    WHERE id = $4"
+    values = [@name, @description, @visited, @id]
     SqlRunner.run(sql, values)
   end
 
