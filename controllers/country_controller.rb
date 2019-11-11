@@ -9,3 +9,8 @@ also_reload( '../models/*' )
 get '/home/new_country' do
   erb(:"country/new_country")
 end
+
+post '/home/new_country' do
+  Country.new(params).save
+  redirect to '/home'
+end
