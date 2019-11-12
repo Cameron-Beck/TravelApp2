@@ -1,1 +1,12 @@
-bhilkb
+<div class="countries-head">
+  <h1>Visited Destinations in <%= @city.name  %></h1>
+  <a class="add-btn"href="/add_country_to_bucket_list">+</a>
+</div>
+<div class="countries-container">
+  <% @destinations.each do |destination| %>
+  <div class="country-container">
+    <h3><%= destination['name'] %></h3>
+    <p><%= destination['description'] %></p>
+  </div>
+  <% end %>
+</div>

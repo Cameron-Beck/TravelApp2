@@ -3,7 +3,7 @@
 <div class="countries-container">
   <% @cities.each do |city| %>
   <div class = "country-container">
-    <h3><a class="country-title" href="/bucket_list_destinations/<%= city['id'] %>"><%= city['name'] %></a></h3>
+    <h3><a class="country-title" href="/visited_destinations/<%= city['id'] %>"><%= city['name'] %></a></h3>
     <p><%= city['description'] %></p>
     <form action="/home/<%= city['id'] %>/delete_city" method="POST"><input type="submit" value="Delete"></form>
     <form action="/home/<%= city['id'] %>/edit_city"><input type="submit" value="edit"></form>

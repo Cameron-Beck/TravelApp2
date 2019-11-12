@@ -68,3 +68,10 @@ get '/bucket_list_destinations/:id' do
   @id = params['id']
   erb(:"destination/bucket_list_destination")
 end
+
+get '/visited_destinations/:id' do
+  @city = City.find(params['id'])
+  @destinations = @city.destinations()
+  @id = params['id']
+  erb(:"destination/visited_destination")
+end
