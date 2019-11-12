@@ -16,10 +16,10 @@ CREATE TABLE cities (
   country_id INT8 REFERENCES countries(id) ON DELETE CASCADE
 );
 
-CREATE TABLE cities (
+CREATE TABLE destinations (
   id SERIAL8 PRIMARY KEY,
   name VARCHAR(255),
   visited BOOLEAN,
   description TEXT,
-  country_id INT8 REFERENCES countries(id) ON DELETE CASCADE
+  city_id INT8 REFERENCES cities(id) ON DELETE CASCADE
 );
