@@ -12,7 +12,7 @@ end
 
 post '/home/new_city' do
   City.new(params).save
-  redirect to '/home'
+  redirect to '/home/all_cities'
 end
 
 get '/home/all_cities' do
