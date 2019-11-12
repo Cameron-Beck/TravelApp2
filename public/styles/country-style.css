@@ -12,16 +12,23 @@ body {
 .country-title{
   font-family: 'Prata', serif;
   text-decoration: none;
+  color: grey;
 }
 
 .country-container{
-  background-color: pink;
+  background-color: #F1F0E8;
   width: 17%;
   height: 15em;
   margin-bottom: 2em;
   margin-left: 1em;
   margin-right: 1em;
   text-align: center;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.country-container:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
 .countries-container{
@@ -43,7 +50,7 @@ body {
 /* Split the screen in half */
 .split {
   height: 100%;
-  width: 50%;
+  width: 49.7%;
   position: fixed;
   top: 0;
   overflow-x: hidden;
@@ -59,20 +66,20 @@ body {
   cursor: default
 }
 
-/* Control the left side */
+
 .left {
   left: 0;
   opacity: 1;
   transition: opacity .25s ease-in-out;
   -moz-transition: opacity .25s ease-in-out;
   -webkit-transition: opacity .25s ease-in-out;
+  border-right: 5px solid grey;
 }
 
 .left:hover{
-   opacity: 0.5;
+   opacity: 0.7;
 }
 
-/* Control the right side */
 .right {
   right: 0;
   background-image: url(/images/home4.jpg);
@@ -80,14 +87,13 @@ body {
   transition: opacity .25s ease-in-out;
   -moz-transition: opacity .25s ease-in-out;
   -webkit-transition: opacity .25s ease-in-out;
-
+  border-left: 5px solid grey;
 }
 
 .right:hover{
-   opacity: 0.5;
+   opacity: 0.7;
 }
 
-/* If you want the content centered horizontally and vertically */
 .centered {
   position: absolute;
   top: 20%;

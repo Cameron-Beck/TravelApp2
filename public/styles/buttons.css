@@ -8,3 +8,8 @@
   padding: 10px;
   text-align: center;
 }
+
+.page-title{
+  color: grey;
+  font-family: 'Prata', serif;
+}

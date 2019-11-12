@@ -5,7 +5,7 @@ body {
 .nav {
   height: 50px;
   width: 100%;
-  background-color: red;
+    background-color: #D8E2DC;
   position: relative;
   z-index: 999;
 
@@ -18,7 +18,7 @@ body {
 .nav-title {
   display: inline-block;
   font-size: 22px;
-  color: #fff;
+  color: grey;
   padding: 10px 10px 10px 10px;
 }
 
@@ -36,7 +36,7 @@ body {
   display: inline-block;
   padding: 13px 10px 13px 10px;
   text-decoration: none;
-  color: #efefef;
+  color: grey;
 }
 
 .nav-links a:hover {
