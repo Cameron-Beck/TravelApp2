@@ -1,25 +1,30 @@
 require_relative('../db/sql_runner.rb')
 require_relative('./city.rb')
+require_relative('./country.rb')
+
+
 class Destination
 
-  attr_reader :name, :visited, :description, :id
+  attr_reader :name, :visited, :description, :id, :city_id
 
   def initialize(options)
     @name = options['name']
     @visited = options['visited']
     @description = options['description']
     @id = options['id'].to_i
+    @city_id = options['city_id'].to_i
   end
 
   def save()
     sql = "INSERT INTO destinations(
       name ,
       visited,
-      description)
+      description,
+    city_id)
       VALUES(
-      $1, $2, $3)
+      $1, $2, $3, $4)
       RETURNING id"
-    values = [@name, @visited, @description]
+    values = [@name, @visited, @description, @city_id]
     results = SqlRunner.run(sql, values)
     @id = results.first()['id'].to_i
   end
@@ -80,14 +85,6 @@ class Destination
     destination_data = SqlRunner.run(sql)
     visited_destinations = map_items(country_data)
     return visited_destinations
-  end
-
-  def destinations()
-    sql = "SELECT * FROM destinations WHERE city_id = $1"
-    values = [@id]
-    destination_data = SqlRunner.run(sql, values)
-    destinations = city_data.map{|destination| Destination.new(destination)}
-    return destination_data
   end
 
 end

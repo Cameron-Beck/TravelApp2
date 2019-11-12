@@ -69,7 +69,15 @@ city4 = City.new({
   destination1 = Destination.new({
     "name" => "Big Ben",
     "visited" => false,
-    'city_id' => city1.id,
+    "city_id" => city1.id,
     "description" => "big Ben is good"
     })
     destination1.save()
+
+  destination2 = Destination.new({
+    "name" => "Eiffel Tower",
+    "visited" => true,
+    "city_id" => city2.id,
+    "description" => "big Ben is good"
+    })
+    destination2.save()
