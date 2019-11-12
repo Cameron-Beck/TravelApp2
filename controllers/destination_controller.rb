@@ -21,6 +21,12 @@ post '/home/new_destination' do
   redirect to '/home/all_destinations'
 end
 
+post '/home/:id/delete_destination' do
+  destination = Destination.find(params['id'])
+  destination.delete
+  redirect back
+end
+
 get '/home/:id/edit_destination' do
   @destination = Destination.find(params['id'])
   erb(:"destination/edit_destination")

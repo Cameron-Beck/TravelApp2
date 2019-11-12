@@ -21,6 +21,13 @@ get '/home/all_cities' do
   erb(:"city/all_cities")
 end
 
+# get '/home/cities_by_country' do
+#   @city = City.find(params['id'])
+#   @cities = @city.cities_by_country()
+#   @id = params['id']
+#   erb(:"city/cities_by_country")
+# end
+
 post '/home/:id/delete_city' do
   city = City.find(params['id'])
   city.delete

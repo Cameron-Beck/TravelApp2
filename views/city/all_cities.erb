@@ -1,4 +1,5 @@
 <div class="countries-head">
+  <!-- <a href="/home/cities_by_country">cities_by_country</a> -->
   <h1>All Cities</h1>
 </div>
 <div class="countries-container">
@@ -6,6 +7,7 @@
   <div class="country-container">
     <h3><a class="country-title"><%= city.name.capitalize %></a></h3>
     <p><%= city.description %></p>
+    <p><%=  %></p>
     <form action="/home/<%= city.id %>/delete_city" method="POST"><input type="submit" value="Delete"></form>
     <form action="/home/<%= city.id %>/edit_city"><input type="submit" value="edit"></form>
   </div>

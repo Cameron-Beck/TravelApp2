@@ -90,4 +90,11 @@ class Country
     return city_data
   end
 
+  def cities_by_country
+    sql = "SELECT c.* FROM countries c INNER JOIN cities ci ON ci.country_id = c.id WHERE ci.victim_id = $1;"
+    values = [@id]
+    city_data = SqlRunner.run(sql, values)
+    cities = city_data.map{|city| City.new(city)}
+    return city_data
+  end
 end
