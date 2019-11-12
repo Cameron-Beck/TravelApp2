@@ -1,0 +1,14 @@
+<div class="countries-head">
+  <h1>All Cities</h1>
+</div>
+<div class="countries-container">
+  <% @destination.each do |destination| %>
+  <div class="country-container">
+    <h3><a class="country-title"><%= destination.name.capitalize %></a></h3>
+    <p><%= destination.description %></p>
+    <form action="/home/<%= destination.id %>/delete_destination" method="POST"><input type="submit" value="Delete"></form>
+    <form action="/home/<%= destination.id %>/edit_destination"><input type="submit" value="edit"></form>
+  </div>
+  <% end %>
+  <a href="/home/new_city">Add New Destination</a> <br>
+</div>
