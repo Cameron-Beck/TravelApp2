@@ -82,12 +82,12 @@ class Destination
     return visited_destinations
   end
 
-  # def cities()
-  #   sql = "SELECT * FROM destinations WHERE country_id = $1"
-  #   values = [@id]
-  #   city_data = SqlRunner.run(sql, values)
-  #   cities = city_data.map{|city| City.new(city)}
-  #   return city_data
-  # end
+  def destinations()
+    sql = "SELECT * FROM destinations WHERE city_id = $1"
+    values = [@id]
+    destination_data = SqlRunner.run(sql, values)
+    destinations = city_data.map{|destination| Destination.new(destination)}
+    return destination_data
+  end
 
 end
