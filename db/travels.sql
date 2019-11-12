@@ -1,3 +1,4 @@
+DROP TABLE destinations;
 DROP TABLE cities;
 DROP TABLE countries;
 

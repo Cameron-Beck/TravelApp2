@@ -1,8 +1,10 @@
 require_relative('../models/city.rb')
 require_relative('../models/country.rb')
+require_relative('../models/destination.rb')
 
 City.delete_all()
 Country.delete_all()
+Destination.delete_all()
 
 country1 = Country.new({
   "name" => "England",
@@ -63,3 +65,11 @@ city4 = City.new({
   "description" => "like this place"
   })
   city4.save()
+
+  destination1 = Destination.new({
+    "name" => "Big Ben",
+    "visited" => false,
+    'city_id' => city1.id,
+    "description" => "big Ben is good"
+    })
+    destination1.save()
