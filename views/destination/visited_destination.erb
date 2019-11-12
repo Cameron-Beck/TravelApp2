@@ -7,6 +7,8 @@
   <div class="country-container">
     <h3><%= destination['name'] %></h3>
     <p><%= destination['description'] %></p>
+    <form action="/home/<%= destination['id'] %>/delete_destination" method="POST"><input type="submit" value="Delete"></form>
+    <form action="/home/<%= destination['id'] %>/edit_destination"><input type="submit" value="edit"></form>
   </div>
   <% end %>
 </div>
