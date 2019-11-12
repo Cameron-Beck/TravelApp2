@@ -5,9 +5,10 @@ body {
 .nav {
   height: 50px;
   width: 100%;
-  background-color: pink;
+  background-color: red;
   position: relative;
-  
+  z-index: 999;
+
 }
 
 .nav-header {
@@ -77,5 +78,4 @@ body {
   a {
     display: block;
     width: 100%;
-
 }
