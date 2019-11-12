@@ -8,7 +8,7 @@ also_reload( '../models/*' )
 
 get '/bucket_list_destinations/:id' do
   @city = Country.find(params['id'])
-  @cities = @country.cities()
+  @destinations = @city.destinations()
   @id = params['id']
   erb(:"destination/bucket_list_destination")
 end

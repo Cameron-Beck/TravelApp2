@@ -1,0 +1,10 @@
+<h3><a href="/home/visited_countries">Back to Countries Visited</a></h3>
+<h1>Cities Visited in <%= @city.name %></h1>
+<div class="countries-container">
+  <% @destinations.each do |destination| %>
+  <div class = "country-container">
+    <h3><a class="country-title" href="/bucket_list_destinations/<%= destination['id'] %>"><%= destination['name'] %></a></h3>
+    <p><%= destination['description'] %></p>
+  </div>
+  <% end %>
+</div>
