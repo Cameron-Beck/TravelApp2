@@ -1,0 +1,25 @@
+<form method="POST" action="/home/<%= @destination.id %>/edit_destination">
+  <div>
+    <div>
+      <label for="name">name:</label>
+      <input type="text" name="name" id="name" value="<%= @destination.name %>"/>
+    </div>
+    <div>
+
+      <div>
+        <label for="description">Description</label>
+        <input type="text" name="description" id="description" value="<%= @destination.description%>">
+      </div>
+
+      <div>
+        <label for="visited_select">visited before?:</label>
+        <select name="visited" id="visited_select">
+            <option id="visited" value= 'yes'>yes</option>
+            <option id="visited" value= 'no'>no</option>
+        </select>
+      </div>
+
+      <input type="submit" value="save changes"/>
+    </div>
+  </div>
+</form>

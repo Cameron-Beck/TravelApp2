@@ -20,3 +20,14 @@ post '/home/new_destination' do
   Destination.new(params).save
   redirect to '/home/all_destinations'
 end
+
+get '/home/:id/edit_destination' do
+  @destination = Destination.find(params['id'])
+  erb(:"destination/edit_destination")
+end
+
+post '/home/:id/edit_destination' do
+  destination = Destination.new(params)
+  destination.update
+  redirect to "home/all_destinations"
+end
