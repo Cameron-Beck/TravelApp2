@@ -1,5 +1,7 @@
+<div class="bl-fs-container">
+    <a class="add-btn"href="/home/new_country"><p class="add-btn-txt">+</p></a>
 <div class="countries-head">
-  <h1 class="page-title" >all countries</h1>
+  <h1 class="page-title">All Countries</h1>
 </div>
 <div class="countries-container">
   <% @country.each do |country| %>
@@ -10,5 +12,5 @@
     <form action="/home/<%= country.id %>/edit_country"><input type="submit" value="edit"></form>
   </div>
   <% end %>
-  <a href="/home/new_city">Add New Country</a> <br>
+</div>
 </div>
