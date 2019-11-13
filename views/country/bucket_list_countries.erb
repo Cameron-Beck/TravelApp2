@@ -1,15 +1,19 @@
+<div class="bl-fs-container">
+    <a class="add-btn"href="/home/new_country"><p class="add-btn-txt">+</p></a>
   <div class="countries-head">
-      <a href="/home">Home</a>
   <h1 class="page-title">bucket list countries</h1>
-  <a class="add-btn"href="/home/new_country">+</a>
+
 </div>
 <div class="countries-container">
   <% @country.each do |country| %>
   <div class="country-container">
     <h3><a class="country-title" href="/bucket_list_cities/<%= country.id %>"><%= country.name.capitalize %></a></h3>
     <p><%= country.description %></p>
-    <form action="/home/<%= country.id %>/delete_country" method="POST"><input type="submit" value="Delete"></form>
-    <form action="/home/<%= country.id %>/edit_country"><input type="submit" value="edit"></form>
+    <div class="country-btn-container">
+      <form action="/home/<%= country.id %>/delete_country" method="POST"><input class="function-btn type="submit" value="Delete"></form>
+      <form action="/home/<%= country.id %>/edit_country"><input class="function-btn type="submit" value="edit"></form>
+    </div>
   </div>
   <% end %>
+</div>
 </div>

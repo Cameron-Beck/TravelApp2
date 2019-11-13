@@ -2,5 +2,12 @@
   width: 100%;
   height: 100%;
   background-image: url("/images/background1.jpg");
-  background-size: cover; 
+  background-size: cover;
+}
+
+.bl-fs-container {
+  width: 100%;
+  height: 100%;
+  background-image: url("/images/background2.jpg");
+  background-size: cover;
 }
