@@ -6,7 +6,7 @@
 <div class="countries-container">
   <% @destinations.each do |destination| %>
   <div class="country-container">
-    <h3><%= destination['name'] %></h3>
+    <h3 class="country-title"><%= destination['name'] %></h3>
     <p><%= destination['description'] %></p>
     <div class="country-btn-container">
       <form action="/home/<%= destination['id'] %>/delete_destination" method="POST"><input class="function-btn" type="submit" value="Delete"></form>

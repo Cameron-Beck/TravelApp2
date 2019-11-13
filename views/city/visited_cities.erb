@@ -1,7 +1,7 @@
-
+<div class="bl-fs-container">
+<a class="add-btn"href="/home/new_city"><p class="add-btn-txt">+</p></a>
 <div class="countries-head">
   <h1 class="page-title">Visited Cities</h1>
-  <a class="add-btn"href="/add_country_to_bucket_list">+</a>
 </div>
 <div class="countries-container">
   <% @city.each do |city| %>
@@ -12,4 +12,5 @@
     <form action="/countries_visited/<%= city.id %>/edit_country_bl"><input type="submit" value="edit"></form>
   </div>
   <% end %>
+</div>
 </div>

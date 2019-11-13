@@ -1,16 +1,19 @@
+<div class="bl-fs-container">
+<a class="add-btn"href="/home/new_destination"><p class="add-btn-txt">+</p></a>
+<a class="previous-page" href="/home/bucket_list_cities">Back to Bucket List Cities</a>
 <div class="countries-head">
-  <a href="/home/bucket_list_cities">Bucket List Destinations</a> <br>
   <h1 class="page-title" >bucket list Destinations in <%= @city.name %></h1>
-  <a class="add-btn"href="/add_country_to_bucket_list">+</a>
 </div>
 <div class="countries-container">
   <% @destinations.each do |destination| %>
   <div class="country-container">
-    <h3><%= destination['name'] %></h3>
+    <h3 class="country-title" ><%= destination['name'] %></h3>
     <p><%= destination['description'] %></p>
-    <form action="/home/<%= destination['id'] %>/delete_destination" method="POST"><input type="submit" value="Delete"></form>
-    <form action="/home/<%= destination['id'] %>/edit_destination"><input type="submit" value="edit"></form>
+    <div class="country-btn-container">
+    <form action="/home/<%= destination['id'] %>/delete_destination" method="POST"><input input class="function-btn" type="submit" value="Delete"></form>
+    <form action="/home/<%= destination['id'] %>/edit_destination"><input input class="function-btn" type="submit" value="edit"></form>
+    </div>
   </div>
   <% end %>
-  <a href="/home/new_destination">Add New Destination</a> <br>
+</div>
 </div>
