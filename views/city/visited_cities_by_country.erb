@@ -10,8 +10,8 @@
     <h3><a class="country-title" href="/visited_destinations/<%= city['id'] %>"><%= city['name'] %></a></h3>
     <p><%= city['description'] %></p>
     <div class="country-btn-container">
-      <form action="/home/<%= city['id'] %>/delete_city" method="POST"><input class="function-btn type="submit" value="Delete"></form>
-      <form action="/home/<%= city['id'] %>/edit_city"><input class="function-btn type="submit" value="edit"></form>
+      <form action="/home/<%= city['id'] %>/delete_city" method="POST"><input class="function-btn" type="submit" value="Delete"></form>
+      <form action="/home/<%= city['id'] %>/edit_city"><input class="function-btn" type="submit" value="edit"></form>
     </div>
   </div>
   <% end %>

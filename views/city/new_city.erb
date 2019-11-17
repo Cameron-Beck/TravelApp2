@@ -1,24 +1,30 @@
+<div class="nc-fs-container">
+  <div class="countries-head">
 <h1 class="page-title" >New City</h1>
+</div>
 <form method="POST" action="/home/new_city">
   <div class="form-wrapper">
 
-    <div>
+    <div class="form-thing">
       <label for="name">City Name</label>
       <input type="text" name="name" id="name"/>
     </div>
 
-    <div>
+    <div class="form-thing">
       <label for="description">Description</label>
       <input type="text" name="description" id="description"/>
     </div>
 
+    <div class="form-thing">
+      <label for="country_id">Country</label>
     <select name="country_id">
       <% for country in @countries %>
       <option value="<%= country.id %>"><%= country.name %></option>
       <% end %>
       </select>
+    </div>
 
-    <div>
+    <div class="form-thing">
       <label for="visited_select">visited before?:</label>
       <select name="visited" id="visited_select">
           <option id="visited" value= 'yes'>yes</option>
@@ -26,8 +32,9 @@
       </select>
     </div>
 
-    <div>
+    <div class="form-thing">
       <input type="submit" value="Add City"/>
     </div>
   </div>
 </form>
+</div>

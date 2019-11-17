@@ -110,3 +110,8 @@ body {
   transform: translate(-50%, -50%);
   text-align: center;
 }
+
+.form-thing {
+  margin-left: 20px;
+  padding: 10px;
+}

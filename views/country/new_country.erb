@@ -1,18 +1,21 @@
-<h1>New Country</h1>
+<div class="nc-fs-container">
+  <div class="countries-head">
+    <h1 class="page-title">New Country  </h1>
+  </div>
 <form method="POST" action="/home/new_country">
   <div class="form-wrapper">
 
-    <div>
+    <div class="form-thing">
       <label for="name">Country Name</label>
       <input type="text" name="name" id="name"/>
     </div>
 
-    <div>
+    <div class="form-thing">
       <label for="description">Description</label>
       <input type="text" name="description" id="description"/>
     </div>
 
-    <div>
+    <div class="form-thing">
       <label for="visited_select">visited before?:</label>
       <select name="visited" id="visited_select">
           <option id="visited" value= 'yes'>yes</option>
@@ -20,7 +23,7 @@
       </select>
     </div>
 
-    <div>
+    <div class="form-thing">
       <input type="submit" value="Add Country"/>
     </div>
   </div>

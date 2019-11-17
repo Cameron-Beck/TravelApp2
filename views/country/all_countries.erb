@@ -8,8 +8,10 @@
   <div class="country-container">
     <h3><a class="country-title" href="/bucket_list_cities/<%= country.id %>"><%= country.name.capitalize %></a></h3>
     <p><%= country.description %></p>
-    <form action="/home/<%= country.id %>/delete_country" method="POST"><input type="submit" value="Delete"></form>
-    <form action="/home/<%= country.id %>/edit_country"><input type="submit" value="edit"></form>
+    <div class="country-btn-container">
+    <form action="/home/<%= country.id %>/delete_country" method="POST"><input class="function-btn" type="submit" value="Delete"></form>
+    <form action="/home/<%= country.id %>/edit_country"><input class="function-btn" type="submit" value="edit"></form>
+    </div>
   </div>
   <% end %>
 </div>
